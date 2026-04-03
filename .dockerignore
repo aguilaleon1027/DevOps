@@ -1,0 +1,33 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Environment configs
+.env
+
+# Data & Tracking
+data/raw/*
+data/processed/*
+mlruns/
+*.db
+
+# Do not ignore models structure entirely, but exclude large checkpoints if desired.
+# Exclude current models as they will be mounted or downloaded, to save space.
+models/*
+!models/.gitkeep
+
+# Docker specific
+Dockerfile
+.dockerignore
