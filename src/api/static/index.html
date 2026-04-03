@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
     <div class="background-mesh"></div>
-    
+
     <div class="container">
         <header class="header">
             <h1>AI Workout <span class="accent">Generator</span></h1>
@@ -24,12 +26,12 @@
             <section class="glass-card form-section" id="formSection">
                 <form id="workoutForm">
                     <h2 class="section-title">Your Profile</h2>
-                    
+
                     <div class="input-group">
                         <label for="age">Age</label>
                         <input type="number" id="age" required min="10" max="100" placeholder="e.g. 28">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="gender">Gender</label>
                         <select id="gender" required>
@@ -53,6 +55,16 @@
                     </div>
 
                     <div class="input-group">
+                        <label for="primaryGoal">Primary Training Goal</label>
+                        <select id="primaryGoal" required>
+                            <option value="" disabled selected>Select your main goal</option>
+                            <option value="strength">Strength & Power</option>
+                            <option value="bodybuilding">Bodybuilding / Muscle Size</option>
+                            <option value="diet">Diet / Fat Loss</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
                         <label for="targetMuscle">Target Muscle Mass (kg, Optional)</label>
                         <input type="number" step="0.1" id="targetMuscle" placeholder="e.g. 2.5">
                     </div>
@@ -73,7 +85,7 @@
                     <h2>Your Custom Program</h2>
                     <span class="badge difficulty" id="resDifficulty">Intermediate</span>
                 </div>
-                
+
                 <h3 class="program-title" id="resProgramName">Hypertrophy Split</h3>
                 <p class="duration">Estimated Duration: <span id="resDuration">60</span> minutes</p>
 
@@ -86,6 +98,7 @@
         </main>
     </div>
 
-    <script src="app.js"></script>
+    <script src="/static/app.js"></script>
 </body>
+
 </html>

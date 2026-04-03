@@ -24,7 +24,7 @@ def train_model():
     
     with mlflow.start_run():
         # Hyperparameters
-        input_dim = 4 # age, gender(encoded), weight, target_muscle
+        input_dim = 5 # age, gender(encoded), weight, target_muscle, goal
         output_dim = 10 # Assuming 10 workout templates to classify into
         learning_rate = 0.001
         epochs = 100

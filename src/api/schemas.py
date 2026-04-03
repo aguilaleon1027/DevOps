@@ -5,10 +5,18 @@ class UserDemographics(BaseModel):
     age: int = Field(..., gt=0, description="User's age in years")
     gender: str = Field(..., description="User's gender (e.g., 'male', 'female', 'other')")
 
+from enum import Enum
+
+class PrimaryGoal(str, Enum):
+    strength = "strength"
+    bodybuilding = "bodybuilding"
+    diet = "diet"
+
 class FitnessGoals(BaseModel):
     current_weight_kg: float = Field(..., gt=0, description="User's current weight in kg")
     target_weight_kg: float = Field(..., gt=0, description="User's target weight in kg")
     target_muscle_mass_kg: Optional[float] = Field(None, description="User's target muscle mass in kg (optional)")
+    primary_goal: PrimaryGoal = Field(..., description="The main purpose of training")
 
 class RecommendationRequest(BaseModel):
     user_info: UserDemographics

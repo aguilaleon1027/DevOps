@@ -2,7 +2,7 @@ import torch
 from src.ml.train import SimpleWorkoutNet
 
 def load_model(model_path="models/current_model.pt"):
-    input_dim = 4
+    input_dim = 5
     output_dim = 10
     model = SimpleWorkoutNet(input_dim, output_dim)
     try:

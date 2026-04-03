@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             goals: {
                 current_weight_kg: parseFloat(document.getElementById("currentWeight").value),
                 target_weight_kg: parseFloat(document.getElementById("targetWeight").value),
-                target_muscle_mass_kg: targetMuscleInput ? parseFloat(targetMuscleInput) : null
+                target_muscle_mass_kg: targetMuscleInput ? parseFloat(targetMuscleInput) : null,
+                primary_goal: document.getElementById("primaryGoal").value
             }
         };
 
